@@ -3,9 +3,8 @@
 ## membersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
@@ -15,10 +14,9 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|index: true, null: false|
-|group_id|integer|foreign_key: true|
+|group_id|references|foreign_key: true|
 |name|string|index: true, null: false, unique: true|
-|mail|string|null: false|
+|mail|string|index: true, null: false|
 
 ### Association
 - has_many :groups through: :members
@@ -29,8 +27,6 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|index: true, null: false|
-|user_id|integer|null: false, foreign_key: true|
 |group_name|string|index: true, null: false, unique: true|
 
 
@@ -43,9 +39,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
 |body|text
 |image|string
 
