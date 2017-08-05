@@ -1,6 +1,6 @@
 # DB設計
 
-## membersテーブル
+## group_usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|references|null: false, foreign_key: true|
@@ -14,7 +14,6 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|group_id|references|foreign_key: true|
 |name|string|index: true, null: false, unique: true|
 |mail|string|index: true, null: false|
 
