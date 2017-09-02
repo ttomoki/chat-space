@@ -22,7 +22,7 @@
     }
     .menu{
       float: right;
-      .menu__image{
+      &__image{
         display: inline-block;
         a{
           color: $white-text;
@@ -33,16 +33,16 @@
 
   #groupboxs{
     height: calc(100vh - 100px);
-    #groupbox:hover{
+    .groupbox:hover{
       background-color: $groupbox-hover;
     }
-      ul.group {
+      .group {
         padding: 20px;
-        li.group h4 {
+        &_name h4 {
           font-size: 15px;
           color: $white-text;
         }
-        li.message h6 {
+        &_message h6 {
           color: $white-text;
           font-size: 11px;
           padding: 5px;
@@ -95,7 +95,7 @@
     padding: 0 40px;
     padding-top:46px;
     background-color:$gray-box;
-    #messages{
+    .messages{
       padding-bottom: 40px;
       ul.massege{
         display: flex;
