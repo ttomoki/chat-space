@@ -1,3 +1,5 @@
+@import "./variable";
+
 #contents {
   display: flex;
   background-color: white;
@@ -6,25 +8,25 @@
 #sideber {
   height: 100vh;
   width: 300px;
-  background-color: #2f3e51;
+  background-color: $sideber-blue;
   #menubox {
     padding: 0 20px 0 20px;
     height: 100px;
     width: 260px;
-    background-color: #253141;
+    background-color: $sideber-menubox;
     line-height: 100px;
     .name {
       display: inline-block;
       float: left;
       font-size: 16px;
       font-weight: bold;
-      color: #FFFFFF;
+      color: $white-text;
     }
     .menu{
       float: right;
       &__image{
         display: inline-block;
-        color: #FFFFFF;
+        color: $white-text;
       }
     }
   }
@@ -32,16 +34,16 @@
   #groupboxs{
     height: calc(100vh - 100px);
     #groupbox:hover{
-      background-color: #475C76;
+      background-color: $groupbox-hover;
     }
       ul.group {
         padding: 20px;
         li.group h4 {
           font-size: 15px;
-          color: #FFFFFF;
+          color: $white-text;
         }
         li.message h6 {
-          color: #FFFFFF;
+          color: $white-text;
           font-size: 11px;
           padding: 5px;
         }
@@ -54,7 +56,7 @@
   height: 100vh;
   header {
     height: 100px;
-    border-bottom: 2px solid #eeeeee;
+    border-bottom: 2px solid $border-black;
     padding: 0 40px;
     #right{
       float: right;
@@ -64,11 +66,11 @@
         margin: 28px 0 28px 0;
         padding: 0 20px 0 20px;
         background-color: white;
-        border: 2px solid #4741E5;
+        border: 2px solid $edit-button;
       }
         button h4{
           font-weight: bold;
-          color: #4741E5;
+          color: $edit-button;
         }
     #left{
       margin-top: 35px;
@@ -78,22 +80,21 @@
         padding-top: 15px;
         font-size: 12px;
         display: flex;
-        color: #999999;
-         // display: inline;でいかなかったけどdisplay: flex;で横並びになった理由
+        color: $gray-text;
         .member{
           margin: 0 5px;
         }
       }
       #groupname{
         font-size: 20px;
-        color: #333333;
+        color: $black-text;
       }
   }
   #messagebox{
     height: calc(100vh - 100px - 90px - 48px);
     padding: 0 40px;
     padding-top:46px;
-    background-color:#AAAAAA;
+    background-color:$gray-box;
     #messages{
       padding-bottom: 40px;
       ul.massege{
@@ -101,18 +102,18 @@
         li.name{
           font-size: 16px;
           font-weight: bold;
-          color: #434A54;
+          color: $light-black-text;
         }
         li.date{
           margin: 4px 0 0 10px;
           font-size: 12px;
-          color: #999999;
+          color: $gray-text;
         }
       }
       & h4{
         padding-top: 10px;
         font-size: 14px;
-        color: #434A54;
+        color: $light-black-text;
       }
     }
   }
@@ -127,7 +128,7 @@
       line-height: 50px;
       width: calc(100vw - 300px - 70px);
       ul.type{
-        color: #434A54;
+        color:  $light-black-text;
         padding-left: 10px;
         li.image{
           float: right;
@@ -141,11 +142,11 @@
       & a button{
         height: 50px;
         padding: 0 20px 0 20px;
-        background-color: #38AEF0;
+        background-color: $send-button;
         & h4{
           font-size: 16px;
-          background-color: #38AEF0;
-          color: #FFFFFF;
+          background-color: $send-button;
+          color: $white-text;
         }
       }
     }
