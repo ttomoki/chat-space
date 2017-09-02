@@ -1,0 +1,94 @@
+#contents
+
+  #sideber
+
+    #menubox
+      %h3.name
+        tomoki
+      %ul.menu
+        %li.menu__image
+          %a{href:"#"}
+            %i.fa.fa-pencil-square-o.fa-lg
+        %li.menu__image
+          %a{href:"#"}
+            %i.fa.fa-cog.fa-lg
+
+    #groupboxs
+      .groupbox
+        %a{href:"#"}
+          %ul.group
+            %li.group__name
+              %h4 グループ名
+            %li.group__message
+              %h6 message
+      .groupbox
+        %a{href:"#"}
+          %ul.group
+            %li.group__name
+              %h4 グループ名
+            %li.group__message
+              %h6 まだmessageはありません
+
+  #content
+
+    %header
+      #right
+        %a{href:"#"}
+          %button{type:"button"}
+            %h4 Edit
+      #left
+        #groupname
+          グループ名
+        %ul.members
+          members :
+          %li.member  name
+          %li.member  name
+
+    #messagebox
+      .messages
+        %ul.massege
+          %li.massege__name
+            name
+          %li.massege__date
+            2017/08/31 09:57:46
+        %h4
+          massege
+      .messages
+        %ul.massege
+          %li.massege__name
+            name
+          %li.massege__date
+            2017/08/31 09:57:46
+        %h4
+          massege
+      .messages
+        %ul.massege
+          %li.massege__name
+            name
+          %li.massege__date
+            2017/08/31 09:57:46
+        %h4
+          massege
+
+    %footer
+      #typebox
+        %ul.type
+          type a message
+          %li.image
+            %label.imagefile
+              %i.fa.fa-picture-o.fa-lg
+                %input{type:"file",style:"display:none;"}
+      #sendbox
+        %input.send_button{type:"submit",value:"Send"}
+
+
+
+
+
+
+
+
+
+
+
+
