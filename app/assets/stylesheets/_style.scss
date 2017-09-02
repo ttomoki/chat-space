@@ -76,7 +76,7 @@
       margin-top: 35px;
       float: left;
     }
-      ul.members{
+      .members{
         padding-top: 15px;
         font-size: 12px;
         display: flex;
@@ -127,10 +127,10 @@
       background-color: white;
       line-height: 50px;
       width: calc(100vw - 300px - 70px);
-      ul.type{
+      .type{
         color:  $light-black-text;
         padding-left: 10px;
-        li.image{
+        .image{
           float: right;
           padding-right: 10px;
         }
