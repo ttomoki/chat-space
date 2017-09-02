@@ -7,20 +7,22 @@
         tomoki
       %ul.menu
         %li.menu__image
-          %i.fa.fa-pencil-square-o.fa-lg
+          %a{href:"#"}
+            %i.fa.fa-pencil-square-o.fa-lg
         %li.menu__image
-          %i.fa.fa-cog.fa-lg
+          %a{href:"#"}
+            %i.fa.fa-cog.fa-lg
 
     #groupboxs
       #groupbox
-        %a{:href => "#"}
+        %a{href:"#"}
           %ul.group
             %li.group
               %h4 グループ名
             %li.message
               %h6 message
       #groupbox
-        %a{:href => "#"}
+        %a{href:"#"}
           %ul.group
             %li.group
               %h4 グループ名
@@ -31,8 +33,8 @@
 
     %header
       #right
-        %a{:href=>"#"}
-          %button{:type=>"button"}
+        %a{href:"#"}
+          %button{type:"button"}
             %h4 Edit
       #left
         #groupname
@@ -73,12 +75,11 @@
         %ul.type
           type a message
           %li.image
-            %i.fa.fa-picture-o.fa-lg
+            %label.imagefile
+              %i.fa.fa-picture-o.fa-lg
+                %input{type:"file",style:"display:none;"}
       #sendbox
-        %a{:href=>"#"}
-          %button{:type=>"button"}
-            %h4 Send
-
+        %input.send_button{type:"submit",value:"Send"}
 
 
 

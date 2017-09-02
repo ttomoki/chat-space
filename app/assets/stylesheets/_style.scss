@@ -1,8 +1,6 @@
-@import "./variable";
-
 #contents {
   display: flex;
-  background-color: white;
+  background-color: $white-text;
 }
 
 #sideber {
@@ -24,9 +22,11 @@
     }
     .menu{
       float: right;
-      &__image{
+      .menu__image{
         display: inline-block;
-        color: $white-text;
+        a{
+          color: $white-text;
+        }
       }
     }
   }
@@ -110,7 +110,7 @@
           color: $gray-text;
         }
       }
-      & h4{
+      h4{
         padding-top: 10px;
         font-size: 14px;
         color: $light-black-text;
@@ -139,15 +139,12 @@
     #sendbox{
       margin-left: auto;
       padding-left: 15px;
-      & a button{
+      input.send_button{
         height: 50px;
         padding: 0 20px 0 20px;
         background-color: $send-button;
-        & h4{
-          font-size: 16px;
-          background-color: $send-button;
-          color: $white-text;
-        }
+        font-size: 16px;
+        color: $white-text;
       }
     }
   }
