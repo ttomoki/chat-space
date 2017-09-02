@@ -1,71 +1,38 @@
 #contents {
   display: flex;
-<<<<<<< HEAD
-  background-color: white;
-=======
   background-color: $white-text;
->>>>>>> origin/master
 }
 
 #sideber {
   height: 100vh;
   width: 300px;
-<<<<<<< HEAD
-  background-color: #2f3e51;
-=======
   background-color: $sideber-blue;
->>>>>>> origin/master
   #menubox {
     padding: 0 20px 0 20px;
     height: 100px;
     width: 260px;
-<<<<<<< HEAD
-    background-color: #253141;
-=======
     background-color: $sideber-menubox;
->>>>>>> origin/master
     line-height: 100px;
     .name {
       display: inline-block;
       float: left;
       font-size: 16px;
       font-weight: bold;
-<<<<<<< HEAD
-      color: #FFFFFF;
-=======
       color: $white-text;
->>>>>>> origin/master
     }
     .menu{
       float: right;
       &__image{
         display: inline-block;
-<<<<<<< HEAD
-        color: #FFFFFF;
-=======
         a{
           color: $white-text;
         }
->>>>>>> origin/master
       }
     }
   }
 
   #groupboxs{
     height: calc(100vh - 100px);
-<<<<<<< HEAD
-    #groupbox:hover{
-      background-color: #475C76;
-    }
-      ul.group {
-        padding: 20px;
-        li.group h4 {
-          font-size: 15px;
-          color: #FFFFFF;
-        }
-        li.message h6 {
-          color: #FFFFFF;
-=======
     .groupbox:hover{
       background-color: $groupbox-hover;
     }
@@ -77,7 +44,6 @@
         }
         &__message h6 {
           color: $white-text;
->>>>>>> origin/master
           font-size: 11px;
           padding: 5px;
         }
@@ -90,11 +56,7 @@
   height: 100vh;
   header {
     height: 100px;
-<<<<<<< HEAD
-    border-bottom: 2px solid #eeeeee;
-=======
     border-bottom: 2px solid $border-black;
->>>>>>> origin/master
     padding: 0 40px;
     #right{
       float: right;
@@ -104,77 +66,34 @@
         margin: 28px 0 28px 0;
         padding: 0 20px 0 20px;
         background-color: white;
-<<<<<<< HEAD
-        border: 2px solid #4741E5;
-      }
-        button h4{
-          font-weight: bold;
-          color: #4741E5;
-=======
         border: 2px solid $edit-button;
       }
         button h4{
           font-weight: bold;
           color: $edit-button;
->>>>>>> origin/master
         }
     #left{
       margin-top: 35px;
       float: left;
     }
-<<<<<<< HEAD
-      ul.members{
-        padding-top: 15px;
-        font-size: 12px;
-        display: flex;
-        color: #999999;
-         // display: inline;でいかなかったけどdisplay: flex;で横並びになった理由
-=======
       .members{
         padding-top: 15px;
         font-size: 12px;
         display: flex;
         color: $gray-text;
->>>>>>> origin/master
         .member{
           margin: 0 5px;
         }
       }
       #groupname{
         font-size: 20px;
-<<<<<<< HEAD
-        color: #333333;
-=======
         color: $black-text;
->>>>>>> origin/master
       }
   }
   #messagebox{
     height: calc(100vh - 100px - 90px - 48px);
     padding: 0 40px;
     padding-top:46px;
-<<<<<<< HEAD
-    background-color:#AAAAAA;
-    #messages{
-      padding-bottom: 40px;
-      ul.massege{
-        display: flex;
-        li.name{
-          font-size: 16px;
-          font-weight: bold;
-          color: #434A54;
-        }
-        li.date{
-          margin: 4px 0 0 10px;
-          font-size: 12px;
-          color: #999999;
-        }
-      }
-      & h4{
-        padding-top: 10px;
-        font-size: 14px;
-        color: #434A54;
-=======
     background-color:$gray-box;
     .messages{
       padding-bottom: 40px;
@@ -195,7 +114,6 @@
         padding-top: 10px;
         font-size: 14px;
         color: $light-black-text;
->>>>>>> origin/master
       }
     }
   }
@@ -209,17 +127,10 @@
       background-color: white;
       line-height: 50px;
       width: calc(100vw - 300px - 70px);
-<<<<<<< HEAD
-      ul.type{
-        color: #434A54;
-        padding-left: 10px;
-        li.image{
-=======
       .type{
         color:  $light-black-text;
         padding-left: 10px;
         .image{
->>>>>>> origin/master
           float: right;
           padding-right: 10px;
         }
@@ -228,24 +139,12 @@
     #sendbox{
       margin-left: auto;
       padding-left: 15px;
-<<<<<<< HEAD
-      & a button{
-        height: 50px;
-        padding: 0 20px 0 20px;
-        background-color: #38AEF0;
-        & h4{
-          font-size: 16px;
-          background-color: #38AEF0;
-          color: #FFFFFF;
-        }
-=======
       input.send_button{
         height: 50px;
         padding: 0 20px 0 20px;
         background-color: $send-button;
         font-size: 16px;
         color: $white-text;
->>>>>>> origin/master
       }
     }
   }
