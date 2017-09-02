@@ -38,11 +38,11 @@
     }
       .group {
         padding: 20px;
-        &_name h4 {
+        &__name h4 {
           font-size: 15px;
           color: $white-text;
         }
-        &_message h6 {
+        &__message h6 {
           color: $white-text;
           font-size: 11px;
           padding: 5px;
@@ -97,14 +97,14 @@
     background-color:$gray-box;
     .messages{
       padding-bottom: 40px;
-      ul.massege{
+      .massege{
         display: flex;
-        li.name{
+        &__name{
           font-size: 16px;
           font-weight: bold;
           color: $light-black-text;
         }
-        li.date{
+        &__date{
           margin: 4px 0 0 10px;
           font-size: 12px;
           color: $gray-text;
