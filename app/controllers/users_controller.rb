@@ -4,16 +4,15 @@ class UsersController < ApplicationController
 
 	def update
 	  if
-        current_user.update(update_params)
-        redirect_to :root
-      else
-      	binding.pry
-    	redirect_to 'edit_user_path(current_user)'
-      end
+      current_user.update(update_params)
+      redirect_to :root
+    else
+    	render:edit
     end
+  end
 
-    private
-      def update_params
-        params.require(:user).permit(:name, :email)
-      end
+  private
+    def update_params
+      params.require(:user).permit(:name, :email)
+    end
 end
