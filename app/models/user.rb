@@ -10,7 +10,7 @@ class User < ApplicationRecord
   validates :email, uniqueness: true
 
   #association
-  # has_many :groups through: :group_users
-  # has_many :group_users
+  has_many :groups through: :group_users
+  has_many :group_users
   has_many :messages
 end

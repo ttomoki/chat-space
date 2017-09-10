@@ -11,12 +11,4 @@ class GroupsController < ApplicationController
   def update
   end
 
-
-  private
-    def create_params
-    end
-
-    def update_params
-    end
-
 end
