@@ -7,7 +7,7 @@
         tomoki
       %ul.menu
         %li.menu__image
-          %a{href:"#"}
+          = link_to new_group_path do
             %i.fa.fa-pencil-square-o.fa-lg
         %li.menu__image
           = link_to edit_user_path(current_user) do
@@ -15,14 +15,14 @@
 
     #groupboxs
       .groupbox
-        %a{href:"#"}
+        = link_to edit_group_path(1) do
           %ul.group
             %li.group__name
               %h4 グループ名
             %li.group__message
               %h6 message
       .groupbox
-        %a{href:"#"}
+        = link_to edit_group_path(1) do
           %ul.group
             %li.group__name
               %h4 グループ名
