@@ -1,8 +1,9 @@
 .chat-group-form__errors
-  %h2
-    1件のエラーが発生しました。
-    %ul
-      %li エラーです
+  - if @group.errors.any?
+    %h2
+      1件のエラーが発生しました。
+      %ul
+        %li エラーです
 = form_for group do |f|
   %div
     .chat-group-form__field.clearfix
