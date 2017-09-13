@@ -1,0 +1,19 @@
+.chat-group-form__errors
+  %h2
+    1件のエラーが発生しました。
+    %ul
+      %li エラーです
+= form_for group do |f|
+  %div
+    .chat-group-form__field.clearfix
+      .chat-group-form__field--left
+        .chat-group-form__label
+          = f.label :group_name, "グループ名"
+          .chat-group-form__label__memmber
+            = f.label :user_ids, "チャットメンバー"
+      .chat-group-form__field--right
+        = f.text_field :group_name, :placeholder => "グループ名を入力してください", :class => "chat-group-form__input"
+        .check_box
+          = f.collection_check_boxes(:user_ids, User.all, :id, :name) do |b|
+            = b.label { b.check_box + b.text }
+        = f.submit "Save", :disable_with => "Save",:class => "chat-group-form__action-btn"
