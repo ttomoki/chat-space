@@ -10,9 +10,9 @@ class GroupsController < ApplicationController
   def create
   	@group = Group.new(create_params)
   	if @group.save
-  	   redirect_to :root and return
+  	   redirect_to :root
   	else
-  	   render:new
+  	   render :new
   	end
   end
 
