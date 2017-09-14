@@ -1,30 +1,10 @@
 #contents
   #sideber
-    #menubox
-      #menubox
-        %h3.name
-          = current_user.name
-        %ul.menu
-          %li.menu__image
-            = link_to new_group_path do
-              %i.fa.fa-pencil-square-o.fa-lg
-          %li.menu__image
-            = link_to edit_user_path(current_user) do
-              %i.fa.fa-cog.fa-lg
-    #groupboxs
-      - @groups.each do |group|
-        .groupbox
-          = link_to group_messages_path(group.id) do
-            %ul.group
-              %li.group__name
-                %h4
-                  = group.group_name
-              %li.group__message
-                %h6 message
+    = render 'groups/sideber', groups: @groups
   #content
     %header
       #right
-        %a{href:"/groups/1/edit"}
+        = link_to edit_group_path(@group.id) do
           %button{type:"button"}
             %h4 Edit
       #left
