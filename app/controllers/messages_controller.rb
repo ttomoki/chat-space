@@ -6,13 +6,12 @@ class MessagesController < ApplicationController
 	end
 
 	def create
-		binding.pry
-		Message.create(create_params)
-		redirect_to :root
+	  current_user.messages.create(create_params)
+	  redirect_to :root
 	end
 
 	private
 	  def create_params
-	  	params.require(:message).permit(:body,:image).merge(group_id: params[:group_id], user_id: current_user.id)
+	  	params.require(:message).permit(:body,:image).merge(group_id: params[:group_id])
 	  end
 end
