@@ -1,0 +1,25 @@
+#contents
+
+  #sideber
+
+    #menubox
+      %h3.name
+        tomoki
+      %ul.menu
+        %li.menu__image
+          = link_to new_group_path do
+            %i.fa.fa-pencil-square-o.fa-lg
+        %li.menu__image
+          = link_to edit_user_path(current_user) do
+            %i.fa.fa-cog.fa-lg
+
+    #groupboxs
+      - groups.each do |group|
+        .groupbox
+          = link_to edit_group_path(group.id) do
+            %ul.group
+              %li.group__name
+                %h4
+                  = group.group_name
+              %li.group__message
+                %h6 message
