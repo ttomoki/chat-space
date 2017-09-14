@@ -12,7 +12,7 @@ class GroupsController < ApplicationController
   	if @group.save
   	   redirect_to :root, notice: 'グループを作成しました'
   	else
-  		flash.now[:alert] = "グループを作成できませんでした"
+  	   flash.now[:alert] = "グループを作成できませんでした"
   	   render :new
   	end
   end
@@ -26,7 +26,7 @@ class GroupsController < ApplicationController
 
   private
     def create_params
-      params.require(:group).permit(:group_name,user_ids: [])
+      params.require(:group).permit(:group_name, user_ids: [])
     end
 
 end
