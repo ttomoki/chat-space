@@ -1,39 +1,30 @@
 #contents
-
   #sideber
-
     #menubox
-      %h3.name
-        tomoki
-      %ul.menu
-        %li.menu__image
-          = link_to new_group_path do
-            %i.fa.fa-pencil-square-o.fa-lg
-        %li.menu__image
-          = link_to edit_user_path(current_user) do
-            %i.fa.fa-cog.fa-lg
-
+      #menubox
+        %h3.name
+          = current_user.name
+        %ul.menu
+          %li.menu__image
+            = link_to new_group_path do
+              %i.fa.fa-pencil-square-o.fa-lg
+          %li.menu__image
+            = link_to edit_user_path(current_user) do
+              %i.fa.fa-cog.fa-lg
     #groupboxs
-      .groupbox
-        = link_to edit_group_path(10) do
-          %ul.group
-            %li.group__name
-              %h4 グループ名
-            %li.group__message
-              %h6 message
-      .groupbox
-        = link_to edit_group_path(10) do
-          %ul.group
-            %li.group__name
-              %h4 グループ名
-            %li.group__message
-              %h6 まだmessageはありません
-
+      - @groups.each do |group|
+        .groupbox
+          = link_to group_messages_path(group.id) do
+            %ul.group
+              %li.group__name
+                %h4
+                  = group.group_name
+              %li.group__message
+                %h6 message
   #content
-
     %header
       #right
-        %a{href:"/groups/10/edit"}
+        %a{href:"/groups/1/edit"}
           %button{type:"button"}
             %h4 Edit
       #left
@@ -43,7 +34,6 @@
           members :
           %li.member  name
           %li.member  name
-
     #messagebox
       .messages
         %ul.massege
@@ -69,26 +59,12 @@
             2017/08/31 09:57:46
         %h4
           massege
-
     %footer
-      #typebox
-        %ul.type
-          type a message
-          %li.image
-            %label.imagefile
-              %i.fa.fa-picture-o.fa-lg
-                %input{type:"file",style:"display:none;"}
-      #sendbox
-        %input.send_button{type:"submit",value:"Send"}
-
-
-
-
-
-
-
-
-
-
-
-
+      =form_for [@group,@message] do |f|
+        #typebox
+          =f.text_field :body, placeholder: "type a message",class: "typebox"
+          .image
+            = fa_icon "picture-o" do
+              =f.file_field :image, type: 'file'
+        #sendbox
+          =f.submit "Send", disable_with: "Send", class: "send_button"

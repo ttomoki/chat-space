@@ -119,27 +119,27 @@
   }
   footer{
     height: 50px;
-    padding: 20px 40px;
+    padding: 20px 0 20px 40px;
     background-color: gray;
     display: flex;
     #typebox{
+      float: left;
       height: 50px;
       background-color: white;
       line-height: 50px;
-      width: calc(100vw - 300px - 70px);
-      .type{
-        color:  $light-black-text;
-        padding-left: 10px;
-        .image{
-          float: right;
-          padding-right: 10px;
-        }
+      width: calc(100vw - 300px - 170px);
+      color:  $light-black-text;
+      padding-left: 10px;
+      .image{
+        float: right;
+        padding-right: 10px;
       }
     }
     #sendbox{
+      float: right;
       margin-left: auto;
       padding-left: 15px;
-      input.send_button{
+      .send_button{
         height: 50px;
         padding: 0 20px 0 20px;
         background-color: $send-button;
@@ -149,3 +149,4 @@
     }
   }
 }
+
