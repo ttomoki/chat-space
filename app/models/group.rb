@@ -1,6 +1,6 @@
 class Group < ApplicationRecord
   #validation
-  validates_presence_of :group_name
+  validates :group_name, presence: true
   validates :group_name, uniqueness: true
 
   #association
