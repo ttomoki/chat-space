@@ -10,9 +10,9 @@ class MessagesController < ApplicationController
 	def create
 	  @message = current_user.messages.new(create_params)
 	  if @message.save
-	     redirect_to :root
+	     redirect_to :group_messages
 	  else
-	  	 redirect_to :root, alert: 'メッセージを入力してください'
+	  	 redirect_to :group_messages, alert: 'メッセージを入力してください'
 	  end
 	end
 
