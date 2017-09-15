@@ -9,11 +9,12 @@
             %h4 Edit
       #left
         #groupname
-          グループ名
+          = @group.group_name
         %ul.members
           members :
-          %li.member  name
-          %li.member  name
+          - @users.each do |member|
+            %li.member
+              = member.name
     #messagebox
       .messages
         %ul.massege
