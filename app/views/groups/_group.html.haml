@@ -5,4 +5,8 @@
         %h4
           = group.group_name
       %li.group__message
-        %h6 message
+        - if group.messages.presence
+          %h6
+            = group.messages.last.body
+        - else
+          %h6 まだメッセージはありません

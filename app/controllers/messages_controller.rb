@@ -4,11 +4,16 @@ class MessagesController < ApplicationController
 	  @group = Group.find(params[:group_id])
       @message = Message.new
       @users = @group.users
+      @messages = @group.messages
 	end
 
 	def create
-	  current_user.messages.create(create_params)
-	  redirect_to :root
+	  @message = current_user.messages.new(create_params)
+	  if @message.save
+	     redirect_to :root
+	  else
+	  	 redirect_to :root, alert: 'メッセージを入力してください'
+	  end
 	end
 
 	private

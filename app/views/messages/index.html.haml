@@ -1,6 +1,6 @@
 #contents
   #sideber
-    = render 'groups/sideber', groups: @groups
+    = render 'groups/sideber'
   #content
     %header
       #right
@@ -16,30 +16,7 @@
             %li.member
               = member.name
     #messagebox
-      .messages
-        %ul.massege
-          %li.massege__name
-            name
-          %li.massege__date
-            2017/08/31 09:57:46
-        %h4
-          massege
-      .messages
-        %ul.massege
-          %li.massege__name
-            name
-          %li.massege__date
-            2017/08/31 09:57:46
-        %h4
-          massege
-      .messages
-        %ul.massege
-          %li.massege__name
-            name
-          %li.massege__date
-            2017/08/31 09:57:46
-        %h4
-          massege
+      = render @messages
     %footer
       =form_for [@group,@message] do |f|
         #typebox
