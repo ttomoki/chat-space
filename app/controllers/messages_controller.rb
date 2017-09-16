@@ -6,7 +6,8 @@ class MessagesController < ApplicationController
 	def create
 	  @message = current_user.messages.new(create_params)
 	  if @message.save
-	     redirect_to :group_messages
+	  	 set_data
+	     render :index
 	  else
 	  	 flash.now[:alert] = @message.errors.full_messages.last
 	  	 set_data
