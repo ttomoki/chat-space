@@ -1,0 +1,8 @@
+.messages
+  %ul.massege
+    %li.massege__name
+      = message.user.name
+    %li.massege__date
+      = message.created_at.strftime("%Y-%m-%d %H:%M:%S")
+  %h4
+    = message.body

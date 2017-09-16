@@ -1,8 +1,12 @@
 .groupbox
-  = link_to edit_group_path(group.id) do
+  = link_to group_messages_path(group) do
     %ul.group
       %li.group__name
         %h4
           = group.group_name
       %li.group__message
-        %h6 message
+        - if group.messages.presence
+          %h6
+            = group.messages.last.body
+        - else
+          %h6 まだメッセージはありません
