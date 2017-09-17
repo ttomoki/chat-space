@@ -7,6 +7,9 @@
       %li.group__message
         - if group.messages.presence
           %h6
-            = group.messages.last.body
+            - if group.messages.last.image.presence
+              画像を送信しました
+            - else
+              = group.messages.last.body
         - else
           %h6 まだメッセージはありません

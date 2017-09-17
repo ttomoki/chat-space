@@ -22,7 +22,7 @@
         #typebox
           =f.text_field :body, placeholder: "type a message",class: "typebox"
           .image
-            = fa_icon "picture-o" do
-              =f.file_field :image, type: 'file'
+            =f.label :image , class: "fa-picture-o icon" do
+              =f.file_field :image, type: 'file', style: "display:none;"
         #sendbox
           =f.submit "Send", disable_with: "Send", class: "send_button"
