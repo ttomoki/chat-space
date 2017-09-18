@@ -7,12 +7,14 @@
   height: 100vh;
   width: 300px;
   background-color: $sideber-blue;
+  overflow: scroll;
   #menubox {
     padding: 0 20px 0 20px;
     height: 100px;
     width: 260px;
     background-color: $sideber-menubox;
     line-height: 100px;
+    overflow: scroll;
     .name {
       display: inline-block;
       float: left;
