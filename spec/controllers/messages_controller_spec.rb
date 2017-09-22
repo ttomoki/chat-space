@@ -53,7 +53,7 @@ describe MessagesController, type: :controller do
 
       it "when can't save new message flash[:alert]" do
         post :create, params: {message: attributes_for(:message, body: "", image: ""), group_id: group.id}
-        expect(flash[:alert]).not_to be_empty
+        expect(flash[:alert]).to include("を入力してください")
       end
 
       it "save message redirects" do
