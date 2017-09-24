@@ -16,13 +16,14 @@
             %li.member
               = member.name
     #messagebox
-      = render @messages
+      .messageslist
+        = render @messages
     %footer
-      =form_for [@group,@message] do |f|
+      =form_for [@group,@message], html: {id: "new_message"} do |f|
         #typebox
           =f.text_field :body, placeholder: "type a message",class: "typebox"
           .image
             =f.label :image , class: "fa-picture-o icon" do
-              =f.file_field :image, type: 'file', style: "display:none;"
+              =f.file_field :image, type: 'file', style: "display:none;", class: "imagebox"
         #sendbox
           =f.submit "Send", disable_with: "Send", class: "send_button"
