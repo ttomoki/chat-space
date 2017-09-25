@@ -38,6 +38,7 @@ $(function(){
       $('#messagebox').append(html)
       var height = $('.messageslist').height();
       $("#messagebox").animate({scrollTop: height});
+      console.log(data)
     })
     .fail(function(){
       alert('error');
