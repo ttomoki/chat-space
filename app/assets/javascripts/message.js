@@ -49,9 +49,7 @@ $(function(){
       contentType: false
     })
     .done(function(data){
-      console.log(data.flash)
       var flashMessage = buildFLASH(data.flash);
-      console.log(flashMessage)
       setTimeout(deleteFLASH, 2000);
       $('body').prepend(flashMessage);
       var html = buildHTML(data);
