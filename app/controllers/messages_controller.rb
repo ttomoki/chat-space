@@ -8,12 +8,12 @@ class MessagesController < ApplicationController
 	  if @message.save
 	  	respond_to do |format|
           format.html { redirect_to group_messages_path }
-          format.json
+          format.json { flash.now[:notice] = "メッセージを送信しました", flash.now[:alert] = @message.errors.full_messages.last }
         end
 	  else
-	  	 flash.now[:alert] = @message.errors.full_messages.last
-	  	 set_data
-	  	 render :index
+	  	respond_to do |format|
+	  	  format.html{ redirect_to group_messages_path, alert: @message.errors.full_messages.last }
+        end
 	  end
 	end
 
