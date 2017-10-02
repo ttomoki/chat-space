@@ -47,10 +47,8 @@ $(function() {
 
   $(document).on('click','.chat-group-user__btn--add', function(){
     var input = $(this);
-    var user_name = $(input.data('user-name'));
-    var user_id = $(input.data('user-id'));
-    var name = user_name.selector
-    var id = user_id[0]
+    var name = input.data('user-name');
+    var id = input.data('user-id');
     addedUserList(name, id);
     input.parent().remove();
   });
