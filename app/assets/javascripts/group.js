@@ -24,7 +24,6 @@ $(function() {
 
   $('#search').on('keyup', function() {
     var input = $('#search').val();
-    console.log(input)
     if(Input !== input){
       $('.searched').remove();
       $.ajax({
@@ -34,7 +33,6 @@ $(function() {
         datatype: 'json'
       })
       .done(function(data) {
-        console.log(data)
         $.each(data, function(i,user) {
           searchedUserList(user);
         });
