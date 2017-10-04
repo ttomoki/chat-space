@@ -1,6 +1,6 @@
 $(function(){
   function buildHTML(message){
-    var html = $(`<div class="messages">
+    var html = $(`<div class="messages" data-message-id="${message.id}">
                     <ul class="massege">
                       <li class="massege__name">
                         ${message.name}
@@ -64,4 +64,28 @@ $(function(){
       $('.send_button').attr('disabled', false);
     })
   })
+
+
+    setInterval(function(){
+      var message_id = $('.messages').last().data('message-id');
+    $.ajax({
+      url: 'messages.json',
+      type: 'GET',
+      data: {
+         message_id: message_id
+      },
+      dataType: 'json'
+    })
+    .done(function(data){
+      $.each(data, function(i, data) {
+        var html = buildHTML(data);
+        $('.messageslist').append(html)
+        var height = $('.messageslist').height();
+        $("#messagebox").animate({scrollTop: height});
+      });
+    })
+    .fail(function(){
+      alert('自動更新に失敗しました');
+    });
+  },5000);
 });
