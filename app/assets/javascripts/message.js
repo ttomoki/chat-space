@@ -72,7 +72,7 @@ $(function(){
         url: 'messages.json',
         type: 'GET',
         data: {
-          messageId: messageId
+          message_id: messageId
         },
         dataType: 'json'
       })
