@@ -246,6 +246,7 @@ Devise.setup do |config|
 
   # The default HTTP method used to sign out a resource. Default is :delete.
   config.sign_out_via = :delete
+  config.secret_key = '8ec12075da0273e64c6b9e5d587431fa04d50caf3c0c16c8af8523b36e49a5d8d3f33d7f53608211b05446407bac5a027b0d5277c3ad98924d24111750fd1bcd'
 
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
